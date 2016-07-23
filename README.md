@@ -1,0 +1,3 @@
+# Tic-Tac-Toe
+Tic Tac Toe in Python
+Dumb "AI" and only polish version ...
