@@ -1,3 +1,3 @@
 # Tic-Tac-Toe
 Tic Tac Toe in Python
-Dumb "AI" and only polish version ...
+Please use test branch version, on master computer opponent ai is for testing purposes only 
