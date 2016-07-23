@@ -1,4 +1,5 @@
 import sys
+from random import randint
 
 #data
 board=[0,0,0,0,0,0,0,0,0]
@@ -17,9 +18,11 @@ def player_move():
         show_board()
         player_move()
 def computer_move():
-    for cp_loop in range(0,8): #super dumb ai, only for testing
-        if board[cp_loop]==0:
-            return cp_loop
+    pcmv = int(randint(0,8))
+    if(board[pcmv]==0):
+	       return pcmv
+    else:
+	       computer_move()
 
 def show_board():
     print(" {} {} {} \n {} {} {} \n {} {} {}".format(board[0],board[1],board[2],board[3],board[4],board[5],board[6],board[7],board[8]))
