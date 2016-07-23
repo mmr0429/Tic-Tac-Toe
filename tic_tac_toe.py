@@ -18,11 +18,15 @@ def player_move():
         show_board()
         player_move()
 def computer_move():
-    pcmv = int(randint(0,8))
-    if(board[pcmv]==0):
-	       return pcmv
-    else:
-	       computer_move()
+    for comp_loop in range(0,8):
+        if(board[comp_loop]==1)and(comp_loop<=8)and(board[comp_loop+1]==0):
+            return comp_loop+1
+        elif(board[comp_loop]==1)and(comp_loop>=1)and(board[comp_loop-1]==0):
+            return comp_loop-1
+        else:
+            if board[comp_loop]==0:
+                return comp_loop
+
 
 def show_board():
     print(" {} {} {} \n {} {} {} \n {} {} {}".format(board[0],board[1],board[2],board[3],board[4],board[5],board[6],board[7],board[8]))
@@ -62,7 +66,7 @@ for x in range(0,8):
         print("Koniec gry")
         break
     board[mv_h]=1
-    #show_board()
+    show_board()
     win_check()
     print("Ruch Komputera")
     mv_pc=0
