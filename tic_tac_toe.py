@@ -9,7 +9,17 @@ def instruction():
     print(" {} {} {} \n {} {} {} \n {} {} {}".format(1,2,3,4,5,6,7,8,9))
 def player_move():
     print("Twój Ruch\nPodaj numer pola")
-    pc=int(input(":"))
+    try:
+        pc=int(input(":"))
+        if (pc<1)or(pc>9):
+            print("Zły ruch")
+            pc=0
+            player_move()
+            
+    except:
+        print("Zły ruch")
+        pc=0
+        player_move()
     if (board[pc-1]==0):
         #print("Mój ruch")
         return pc-1
