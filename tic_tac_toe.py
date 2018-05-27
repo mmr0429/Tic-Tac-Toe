@@ -3,6 +3,7 @@ import sys
 #data
 board=[0,0,0,0,0,0,0,0,0]
 #functions
+#old project
 def instruction():
     print("Witaj w grze Kółko i Krzyżyk\nJesteś graczem nr 1, plansza wygląda następująco\n")
     print(" {} {} {} \n {} {} {} \n {} {} {}".format(1,2,3,4,5,6,7,8,9))
